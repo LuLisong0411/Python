@@ -1,6 +1,8 @@
 demo = "ZHSNS"
 test = "zhsns"
-demo1 = "zhsnshcwwyqhxf__"
+demo1 = "zhsnshcwwyqhxf"
+test1 = "i am {name},age {num}"
+test2 = "username\temail\tpassword\nlulisong\tlulisong@qq.com\t12345678\nlulisong\tlulisong@qq.com\t12345678\n"
 
 # start：从那个开始找
 # end：找到哪结束
@@ -46,7 +48,6 @@ demo1 = "zhsnshcwwyqhxf__"
 # print(v7)
 
 # format(self, *args, **kwargs)：格式化，将一个字符串中的占位符替换为指定的值，有点类似传值。
-# test1 = "i am {name},age {num}"
 # print(test1)
 # t = test1.format(name="lulisong",num=19)
 # print(t)
@@ -68,3 +69,24 @@ demo1 = "zhsnshcwwyqhxf__"
 # isalnum(self, *args, **kwargs):判断字符串中是否只包含字母和数字. 结果为 true 只包含数字和字母; 结果为 false 也包含其他字符
 # t = demo1.isalnum()
 # print(t)
+
+# expandtabs(self, *args, **kwargs)：按给的参数断句，断句遇见有\t的话补空格，补到和参数一样长度，\n的话就换行。可以做表格
+# v = test2.expandtabs(30)
+# print(v)
+
+# isalpha(self, *args, **kwargs)：判断字符串是否是字母,汉字
+# t = demo.isalpha()
+# print(t)
+
+# isdecimal(self, *args, **kwargs)：判断一个字符串是否是数字，不支持特殊字符
+# isdigit(self, *args, **kwargs)：判断一个字符串是否是数字，支持特殊字符
+# testStr = "②"
+# testStr = "123"
+# v1 = test.isdecimal()
+# v2 = test.isdigit()
+# print(v1,v2)
+
+# isidentifier(self, *args, **kwargs)：判断是否是标识符，def,数字，字母，下划线
+# test3 = "_123"
+# v = test3.isidentifier()
+# print(v)
