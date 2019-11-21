@@ -12,17 +12,29 @@ test2 = "username\temail\tpassword\nlulisong\tlulisong@qq.com\t12345678\nlulison
 # print(v1)
 
 # casefold()、lower():做字母小写转换，但casefold()可以做很多未知特殊字符的变小写的转换。
+# swapcase(self, *args, **kwargs)：将字符串做大写转换
 # v2 = demo.casefold()
 # v3 = demo.lower()
+# v4 = demo1.swapcase()
 # print(v2)
 # print(v3)
+# print(v4)
 
 # center(self, *args, **kwargs):设置宽度并将内容居中
+# ljust(self, *args, **kwargs)：设置宽度将内容放在左边
+# rjust(self, *args, **kwargs)：设置宽度将内容放在右边
+# zfill(self, *args, **kwargs)：设置宽度将内容放在右边，默认只能用0填充
 # 第一个参数可以不用，第二个要带参数，第三个不带参数设置为none
 # 20：代指总长度
 # *：代指空白未知填充，只支持一个字符填充，可有可无
 # v4 = test.center(20, "*")
+# v5 = test.ljust(20,"*")
+# v6 = test.rjust(20."*")
+# v7 = test.zfill(20)
 # print(v4)
+# print(v5)
+# print(v6)
+# print(v7)
 
 # count(self, sub, start=None, end=None):去字符串中寻找字符或者是子序列出现的次数
 # sub：字符或者是子序列
@@ -78,8 +90,9 @@ test2 = "username\temail\tpassword\nlulisong\tlulisong@qq.com\t12345678\nlulison
 # t = demo.isalpha()
 # print(t)
 
-# isdecimal(self, *args, **kwargs)：判断一个字符串是否是数字，不支持特殊字符
-# isdigit(self, *args, **kwargs)：判断一个字符串是否是数字，支持特殊字符
+# isdecimal(self, *args, **kwargs)：判断一个字符串是否是数字，不支持特殊字符，中文数字
+# isdigit(self, *args, **kwargs)：判断一个字符串是否是数字，支持特殊字符，不支持中文数字
+# isnumeric(self, *args, **kwargs)：判断一个字符串是否是数字，包含中文数字
 # testStr = "②"
 # testStr = "123"
 # v1 = test.isdecimal()
@@ -90,3 +103,76 @@ test2 = "username\temail\tpassword\nlulisong\tlulisong@qq.com\t12345678\nlulison
 # test3 = "_123"
 # v = test3.isidentifier()
 # print(v)
+
+# isprintable(self, *args, **kwargs)：是否存在不可显示的字符
+# test3 = "odfujsojf\tkasjhdkas"
+# v = test3.isprintable()
+# print(v)
+
+# isspace(self, *args, **kwargs)：判断是否全部是空格
+# test3 = "    "
+# v = test3.isspace()
+# print(v)
+
+# istitle(self, *args, **kwargs)：判断是否是标题
+# title(self, *args, **kwargs)：把一个字符串转换成标题
+# test3 = "Return True if the string is a title-cased string, False otherwise."
+# v = test3.istitle()
+# v1 = test3.title()
+# v2 = v1.istitle()
+# print(v)
+# print(v1)
+# print(v2)
+
+# join(self, ab=None, pq=None, rs=None)：将字符串中的每一个元素按照指定的分割符进行拼接。
+# test3 = "舟杭绍南苏"
+# print(test3)
+# t = " "
+# v = t.join(test3)
+# v1 = "_".join(test3)
+# print(v)
+# print(v1)
+
+# islower(self, *args, **kwargs)：判断字符串是否全为小写
+# isupper(self, *args, **kwargs)：判断字符串是否全为大写
+# v = test.islower()
+# v1 = test.isupper()
+# print(v,v1)
+
+# 移除指定匹配，有限最多匹配
+# lstrip(self, *args, **kwargs)
+# rstrip(self, *args, **kwargs)
+# strip(self, *args, **kwargs)
+# v = demo1.lstrip("zh")
+# v1 = demo1.rstrip("sn")
+# v2 = demo1.strip("asd")
+# print(v,v1,v2)
+
+# 创建一个对应关系，一一替换
+# maketrans(self, *args, **kwargs)
+# translate(self, *args, **kwargs)
+# v = "saoaeioasxasaourad"
+# m = str.maketrans("aiueo","12345")
+# new_v = v.translate(m)
+# print(new_v)
+
+# partition(self, *args, **kwargs)：从左往右只能分割为三份，按匹配到的第一个分割
+# rpartition(self, *args, **kwargs)：从右往左只能分割为三份，按匹配到的第一个分割
+# split(self, *args, **kwargs)：从左往右分割，不包含分割的参数，可以设置分割的参数来分割份数
+# rsplit(self, *args, **kwargs)：从右往左分割，不包含分割的参数，可以设置分割的参数来分割份数
+# test3 = "askjdsaklsjdfasoifda"
+# v = test3.partition("s")
+# v1 = test3.rpartition("3")
+# v2 = test3.split("s")
+# v3 = test3.rsplit("s",2)
+# print(v)
+# print(v1)
+# print(v2)
+# print(v3)
+
+# splitlines(self, *args, **kwargs)：分割只能根据True,False 来保留是否换行字符。
+# test3 = "asdjhajkh\nsdkja\nasdfas"
+# v = test3.splitlines(False)
+# v1 = test3.splitlines(True)
+# print(v)
+# print(v1)
